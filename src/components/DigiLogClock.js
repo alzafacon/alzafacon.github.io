@@ -23,7 +23,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
 
     // adjustments
     // use zoom to dilate svg
-    const dilatedFaceSide = size * utils.getDilation(zoom, radius)
+    const scaleFactor = utils.getDilation(zoom, radius)
 
     // use time and zoom to translate face
     const dx = utils.getDeltaX(time, zoom, radius) * utils.getDilation(zoom, radius)
@@ -34,8 +34,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
             <div id="clockFaceContainer" className="floatCenter" style={{
                 width: `${size}px`,
                 height: `${size}px`,
-                left: `${- dx}px`,
-                top: `${dy}px`,
+                transform: `translate(${-dx}px, ${dy}px)`
             }}>
                 {/* img will float in center of container for scaling on the center point */}
                 <img
@@ -43,8 +42,10 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     src={clockFace}
                     alt="clock face"
                     style={{
-                        width: `${dilatedFaceSide}px`,
-                        height: `${dilatedFaceSide}px`,
+                        width: `${size}px`,
+                        height: `${size}px`,
+                        transform: `scale(${scaleFactor})`,
+                        // transition: '1s ease-in-out'
                     }}
                 />
             </div>
@@ -52,8 +53,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
             <div id="hourHandContainer" className="floatCenter" style={{
                 width: `${size}px`,
                 height: `${size}px`,
-                left: `${- dx}px`,
-                top: `${dy}px`,
+                transform: `translate(${-dx}px, ${dy}px)`
             }}>
                 {/* img will float in center of container for scaling on the center point */}
                 <img
@@ -61,9 +61,9 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     src={hourHand}
                     alt="hour hand"
                     style={{
-                        width: `${dilatedFaceSide}px`,
-                        height: `${dilatedFaceSide}px`,
-                        transform: `rotate(${90 - utils.rad2deg(time).toFixed(1)}deg)`,
+                        width: `${size}px`,
+                        height: `${size}px`,
+                        transform: `scale(${scaleFactor}) rotate(${90 - utils.rad2deg(time).toFixed(1)}deg)`,
                     }}
                 />
             </div>
