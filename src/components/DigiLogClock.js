@@ -30,7 +30,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
     const dy = utils.getDeltaY(time, zoom, radius) * utils.getDilation(zoom, radius)
 
     return (
-        <div style={{ position: 'relative', width: `${size}px`, height: `${size}px`, overflow: 'hidden', borderRadius: "50%" }}>
+        <div style={{ position: 'relative', width: `${size}px`, height: `${size}px`, overflow: 'hidden', borderRadius: "50%", zIndex: 1 }}>
             <div id="clockFaceContainer" className="floatCenter" style={{
                 width: `${size}px`,
                 height: `${size}px`,
@@ -73,6 +73,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
             <div className="floatCenter" style={{
                 width: `${size}px`,
                 height: `${size}px`,
+                zIndex: 0,
             }}>
                 <img
                     id="mask"
