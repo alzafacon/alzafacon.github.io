@@ -1,30 +1,29 @@
+export const ZOOM_RESOLUTION = 100
 
-// alpha is angle between diameter and zoom projection line
-export const getAlpha = (z, viewportRadius) =>
-    Math.atan(z/viewportRadius);
+const getK = (alphaRightBound = Math.PI / 6, resolution = ZOOM_RESOLUTION) =>
+    (1 / alphaRightBound - 2 / Math.PI) / resolution
 
-// center offset is distance between viewport center and clock face center
-export const getCenterOffset = (z, viewportRadius) =>
-    Math.sin(getAlpha(z, viewportRadius)) * viewportRadius;
+const k = getK()
 
-// half length of clock face chord placed on viewport diameter
-export const getHalfChord = (z, viewportRadius) =>
-    Math.cos(getAlpha(z, viewportRadius)) * viewportRadius;
+// alpha is half the zoom segment angle
+export const getAlpha = (zoom) =>
+    1 / (zoom * k + 2 / Math.PI)
+
+export const getScaleFactor = (alpha) =>
+    1 / Math.sin(alpha)
 
 // delta x is offset in x direction 
-export const getDeltaX = (t, z, viewportRadius) =>
-    Math.cos(t) * getCenterOffset(z, viewportRadius);
+export const getDeltaX = (R, tau, alpha) =>
+    R * Math.cos(tau) * Math.cos(alpha) / Math.sin(alpha)
 
 // delta y is offset in y direction
-export const getDeltaY = (t, z, viewportRadius) =>
-    Math.sin(t) * getCenterOffset(z, viewportRadius);
-
-// dilation is scaling multiplier
-export const getDilation = (z, viewportRadius) => 
-    viewportRadius/getHalfChord(z, viewportRadius);
+export const getDeltaY = (R, tau, alpha) =>
+    R * Math.sin(tau) * Math.cos(alpha) / Math.sin(alpha)
 
 export const deg2rad = (degrees) =>
     degrees * Math.PI / 180;
 
 export const rad2deg = (radians) =>
     radians * 180 / Math.PI
+
+export const clamp = (n, min, max) => Math.min(Math.max(n, min), max)

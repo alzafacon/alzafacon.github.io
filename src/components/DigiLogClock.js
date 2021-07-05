@@ -16,18 +16,20 @@ function calcTimeRadians(hour, minute) {
 
 // DigiLog = Digital + Analog
 export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
+    const radius = size / 2
 
     const time = calcTimeRadians(hour, minute)
 
-    const radius = size / 2
+    const clampedZoom = utils.clamp(zoom, 0, utils.ZOOM_RESOLUTION)
+    const alpha = utils.getAlpha(clampedZoom)
 
     // adjustments
     // use zoom to dilate svg
-    const scaleFactor = utils.getDilation(zoom, radius)
+    const scaleFactor = utils.getScaleFactor(alpha)
 
     // use time and zoom to translate face
-    const dx = utils.getDeltaX(time, zoom, radius) * utils.getDilation(zoom, radius)
-    const dy = utils.getDeltaY(time, zoom, radius) * utils.getDilation(zoom, radius)
+    const dx = utils.getDeltaX(radius, time, alpha)
+    const dy = utils.getDeltaY(radius, time, alpha)
 
     return (
         <div style={{ position: 'relative', width: `${size}px`, height: `${size}px`, overflow: 'hidden', borderRadius: "50%", zIndex: 1 }}>

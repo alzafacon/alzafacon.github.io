@@ -4,8 +4,9 @@ import Grid from '@material-ui/core/Grid'
 import ZoomOutIcon from '@material-ui/icons/ZoomOut'
 import ZoomInIcon from '@material-ui/icons/ZoomIn'
 import { BigSlider } from "./BigSlider"
+import { ZOOM_RESOLUTION } from "../utils"
 
-export const DigiLogZoom = ({ size = 200, hour, minute, maxZoom = 150 }) => {
+export const DigiLogZoom = ({ size = 200, hour, minute }) => {
     const [zoom, setZoom] = useState(0)
 
     return (
@@ -19,12 +20,12 @@ export const DigiLogZoom = ({ size = 200, hour, minute, maxZoom = 150 }) => {
                     <BigSlider
                         value={zoom}
                         onChange={(_, newZoom) => setZoom(newZoom)}
-                        max={maxZoom}
+                        max={ZOOM_RESOLUTION}
                         aria-labelledby="continuous-zoom-slider"
                     />
                 </Grid>
                 <Grid item>
-                    <ZoomInIcon onClick={() => setZoom((z) => Math.min(maxZoom, z + 10))} />
+                    <ZoomInIcon onClick={() => setZoom((z) => Math.min(ZOOM_RESOLUTION, z + 10))} />
                 </Grid>
             </Grid>
         </div>
