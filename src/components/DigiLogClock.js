@@ -44,11 +44,15 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     id="clockFace"
                     src={clockFace}
                     alt="clock face"
+                    draggable={false}
+                    onDragStart="return false"
                     style={{
                         width: `${size}px`,
                         height: `${size}px`,
                         transform: `scale(${scaleFactor})`,
                         transition: 'all 0.5s linear',
+                        userSelect: 'none',
+                        pointerEvents: 'none',
                     }}
                 />
             </div>
@@ -64,11 +68,15 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     id="hourHand"
                     src={hourHand}
                     alt="hour hand"
+                    draggable={false}
+                    onDragStart="return false"
                     style={{
                         width: `${size}px`,
                         height: `${size}px`,
                         transform: `scale(${scaleFactor}) rotate(${90 - utils.rad2deg(time).toFixed(1)}deg)`,
                         transition: 'all 0.5s linear',
+                        userSelect: 'none',
+                        pointerEvents: 'none',
                     }}
                 />
             </div>
@@ -81,9 +89,13 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     id="mask"
                     src={clockMask}
                     alt="mask"
+                    draggable={false}
+                    onDragStart="return false"
                     style={{
                         width: `${size * 3}px`,
                         height: `${size * 3}px`,
+                        userSelect: 'none',
+                        pointerEvents: 'none',
                     }}
                 />
             </div>

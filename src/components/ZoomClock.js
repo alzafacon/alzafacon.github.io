@@ -10,7 +10,7 @@ export const DigiLogZoom = ({ size = 200, hour, minute }) => {
     const [zoom, setZoom] = useState(0)
 
     return (
-        <div style={{ width: size }}>
+        <div style={{ width: size, userSelect: 'none' }}>
             <DigiLog size={size} zoom={zoom} hour={hour} minute={minute} />
             <Grid container spacing={2}>
                 <Grid item>

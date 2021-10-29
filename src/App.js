@@ -5,14 +5,14 @@ import { WallClock } from './components/WallClock'
 function App() {
 
     return (
-        <div style={{ display: 'flex' }}>
+        <div style={{ display: 'flex', userSelect: 'none' }}>
             <div style={{ flex: 1, display: "flex", justifyContent: 'center', alignItems: 'center' }}>
                 <WallClock style={{ flex: 1 }} />
-            </div>
-            <div style={{ flex: 1, display: "flex", justifyContent: 'center', alignItems: 'center' }}>
+             </div>
+             <div style={{ flex: 1, display: "flex", justifyContent: 'center', alignItems: 'center' }}>
                 <FreestyleClock style={{ flex: 1 }} />
-            </div>
-        </div>
+             </div>
+         </div>
     )
 }
 
