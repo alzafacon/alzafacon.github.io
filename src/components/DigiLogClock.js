@@ -45,7 +45,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     src={clockFace}
                     alt="clock face"
                     draggable={false}
-                    onDragStart="return false"
+                    onDragStart={() => false}
                     style={{
                         width: `${size}px`,
                         height: `${size}px`,
@@ -69,7 +69,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     src={hourHand}
                     alt="hour hand"
                     draggable={false}
-                    onDragStart="return false"
+                    onDragStart={() => false}
                     style={{
                         width: `${size}px`,
                         height: `${size}px`,
@@ -90,7 +90,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     src={clockMask}
                     alt="mask"
                     draggable={false}
-                    onDragStart="return false"
+                    onDragStart={() => false}
                     style={{
                         width: `${size * 3}px`,
                         height: `${size * 3}px`,
