@@ -1,7 +1,9 @@
-import clockFace from '../clockFace.svg'
-import hourHand from '../hourHand.svg'
-import clockMask from '../clockMask.svg'
-import * as utils from '../utils'
+import React from 'react'
+import styles from './DigiLog.module.css';
+import ClockFace from '@site/static/img/clock/clockFace.svg'
+import HourHand from '@site/static/img/clock/hourHand.svg'
+import ClockMask from '@site/static/img/clock/clockMask.svg'
+import * as utils from './utils'
 
 function calcTimeRadians(hour, minute) {
     // let pole lay on positive y-axis to start angle calculation
@@ -33,16 +35,15 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
 
     return (
         <div style={{ position: 'relative', width: `${size}px`, height: `${size}px`, overflow: 'hidden', borderRadius: "50%", zIndex: 1 }}>
-            <div id="clockFaceContainer" className="floatCenter" style={{
+            <div id="clockFaceContainer" className={styles.floatCenter} style={{
                 width: `${size}px`,
                 height: `${size}px`,
                 transform: `translate(${-dx}px, ${dy}px)`,
                 transition: 'all 0.5s linear',
             }}>
                 {/* img will float in center of container for scaling on the center point */}
-                <img
+                <ClockFace
                     id="clockFace"
-                    src={clockFace}
                     alt="clock face"
                     draggable={false}
                     onDragStart={() => false}
@@ -57,16 +58,15 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                 />
             </div>
 
-            <div id="hourHandContainer" className="floatCenter" style={{
+            <div id="hourHandContainer" className={styles.floatCenter} style={{
                 width: `${size}px`,
                 height: `${size}px`,
                 transform: `translate(${-dx}px, ${dy}px)`,
                 transition: 'all 0.5s linear',
             }}>
                 {/* img will float in center of container for scaling on the center point */}
-                <img
+                <HourHand
                     id="hourHand"
-                    src={hourHand}
                     alt="hour hand"
                     draggable={false}
                     onDragStart={() => false}
@@ -80,20 +80,19 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                     }}
                 />
             </div>
-            <div className="floatCenter" style={{
+
+            <div className={styles.floatCenter} style={{
                 width: `${size}px`,
                 height: `${size}px`,
                 zIndex: 0,
             }}>
-                <img
+                <ClockMask
                     id="mask"
-                    src={clockMask}
                     alt="mask"
                     draggable={false}
                     onDragStart={() => false}
                     style={{
-                        width: `${size * 3}px`,
-                        height: `${size * 3}px`,
+                        transform: `scale(3)`,
                         userSelect: 'none',
                         pointerEvents: 'none',
                     }}

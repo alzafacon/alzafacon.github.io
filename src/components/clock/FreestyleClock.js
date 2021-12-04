@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import { BigSlider } from "./BigSlider"
 import { DigiLogZoom } from "./ZoomClock"
 import Grid from '@material-ui/core/Grid'
