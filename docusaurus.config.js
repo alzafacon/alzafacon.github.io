@@ -8,11 +8,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Site',
   tagline: 'Mostly ideas about computers',
-  url: 'https://fidelcoria.com',
+  url: 'https://alzafacon.com',
   baseUrl: '/',
+  trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
+
+  organizationName: 'alzafacon',
+  projectName: 'alzafacon.github.io',
+  deploymentBranch: 'gh-pages',
 
   presets: [
     [
