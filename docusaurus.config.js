@@ -13,8 +13,8 @@ const config = {
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-
+  favicon: 'https://emojicdn.elk.sh/🚮',
+  
   organizationName: 'alzafacon',
   projectName: 'alzafacon.github.io',
   deploymentBranch: 'gh-pages',
