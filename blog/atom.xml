@@ -2,11 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fidelcoria.com/blog</id>
     <title>Technical Journal Blog</title>
-    <updated>2021-08-26T00:00:00.000Z</updated>
+    <updated>2021-12-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fidelcoria.com/blog"/>
     <subtitle>Technical Journal Blog</subtitle>
     <icon>https://fidelcoria.com/https://emojicdn.elk.sh/🚮</icon>
+    <entry>
+        <title type="html"><![CDATA[DigiLog - The Single Hand Analog Clock with a Digital Enhancement]]></title>
+        <id>DigiLog - The Single Hand Analog Clock with a Digital Enhancement</id>
+        <link href="https://fidelcoria.com/blog/2021/12/05/DigiLog"/>
+        <updated>2021-12-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[In the past single hand clocks and watches were common, but they were difficult to read precisely. Minute hands were added to address the precision problem.]]></summary>
+        <content type="html"><![CDATA[<p>In the past single hand clocks and watches were common, but they were difficult to read precisely. Minute hands were added to address the precision problem.</p><p>An alternative approach to improving precision with a single hand is to digitally zoom the clock face.</p><h2>The Math</h2><p>Definitions
+Viewport: window on circular clock
+<code>R</code>: viewport radius
+Clock face: the number and tick markings as a group
+<code>tau</code>: angle of hour hand from pole (on a polar graph)</p><p>Zooming the clock face means choosing a clock face segment to enlarge. The clock face segment has a chord.
+Let <code>alpha</code> be half the clock face segment angle.
+Zooming is done by scaling the chord to be the viewport diameter.
+Let <code>r</code> be half the chord length, then <code>sin(alpha) = r/R</code>. The scaling factor is <code>R/r = 1/sin(alpha)</code>.
+Let <code>d</code> be the distance from viewport center to chord midpoint before scaling, <code>d = R * cos(alpha)</code>.
+The translation offset in x- and y-direction before scaling are
+<code>dx = cos(tau) * d = R * cos(tau) * cos(alpha)</code>
+<code>dy = sin(tau) * d = R * sin(tau) * cos(alpha)</code></p><p>After scaling
+<code>dx&#x27; = R * cos(tau) * cos(alpha) / sin(alpha)</code>
+<code>dy&#x27; = R * sin(tau) * cos(alpha) / sin(alpha)</code></p><p><code>alpha</code> has interval <code>(0, pi/2]</code>. The left bound is open because <code>alpha = 0</code> means infinite zoom which is not useful to display.
+To avoid the infinite zoom problem we introduce a zoom variable <code>z</code> and a function <code>f: [0, inf) -&gt; [pi/2, 0)</code> that approaches 0 asymptotically.
+The most obvious such function is <code>f(z) = 1 / (z + 2/pi)</code>. An additional advantage of asymptotically approaching 0 is course adjustments at low zoom and fine adjustments at high zoom.</p><p><code>[0, inf)</code> is not practical for input because of <code>inf</code> so it is best to close the right bound. Naturally, the output interval right bound should also be closed at an arbitrary value. One such choice is <code>[0, 100] -&gt; [pi/2, pi/6]</code>. The most obvious such function is <code>g(z) = 1 / (k*z + 2/pi)</code> where the reader can find <code>k</code> as an exercise.</p>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
         <id>welcome</id>
