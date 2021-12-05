@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
+  title: 'Technical Journal',
   tagline: 'Mostly ideas about computers',
   url: 'https://fidelcoria.com',
   baseUrl: '/',
