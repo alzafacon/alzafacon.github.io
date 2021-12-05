@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { ZoomClock } from "./ZoomClock"
+import React, { useState } from 'react'
+import { ZoomClock } from './ZoomClock'
 import { useInterval } from 'react-use'
-import { DateTime } from "luxon"
+import { DateTime } from 'luxon'
 
-export const WallClock = ({ size = 200, timeZone = 'local', label = "" }) => {
+export const WallClock = ({ size = 200, timeZone = 'local', label = '' }) => {
     const [time, setTime] = useState(DateTime.now().setZone(timeZone))
 
     useInterval(() => {

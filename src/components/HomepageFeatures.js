@@ -1,9 +1,16 @@
 import React from 'react';
 import styles from './HomepageFeatures.module.css';
 import Grid from '@material-ui/core/Grid';
+import useIsBrowser from '@docusaurus/useIsBrowser';
 import { WallClock } from '../components/clock/WallClock';
 
 export default function HomepageFeatures() {
+  const isBrowser = useIsBrowser();
+
+  if (isBrowser !== true) {
+    return null;
+  }
+
   return (
     <section className={styles.features}>
       <Grid container justifyContent="center">
