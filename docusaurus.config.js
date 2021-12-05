@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'My Site',
   tagline: 'Mostly ideas about computers',
-  url: 'https://alzafacon.com',
+  url: 'https://fidelcoria.com',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
