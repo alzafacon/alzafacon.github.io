@@ -18,6 +18,14 @@ html[data-theme='dark']  .heroBanner {
   background-image: url("/img/starry_night_full.jpg");
 }
 
+.heroContrast  {
+  background: rgba(0,0,0, 0.5);
+}
+
+html[data-theme='dark'] .heroContrast  {
+  background: rgba(255,255,255, 0.5);
+}
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
