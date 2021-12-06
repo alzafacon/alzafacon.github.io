@@ -14,6 +14,10 @@
   background-size: cover;
 }
 
+html[data-theme='dark']  .heroBanner {
+  background-image: url("/img/starry_night_full.jpg");
+}
+
 @media screen and (max-width: 966px) {
   .heroBanner {
     padding: 2rem;
