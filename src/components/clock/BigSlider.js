@@ -3,7 +3,7 @@ import Slider from '@material-ui/core/Slider'
 
 export const BigSlider = withStyles({
     root: {
-        color: '#000000',
+        color: 'teal',
         height: 8,
     },
     thumb: {

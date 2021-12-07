@@ -34,7 +34,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
     const dy = utils.getDeltaY(radius, time, alpha)
 
     return (
-        <div style={{ position: 'relative', width: `${size}px`, height: `${size}px`, overflow: 'hidden', borderRadius: "50%", zIndex: 1 }}>
+        <div style={{ position: 'relative', width: `${size}px`, height: `${size}px`, overflow: 'hidden', borderRadius: "50%", zIndex: 1, backgroundColor: "white" }}>
             <div id="clockFaceContainer" className={styles.floatCenter} style={{
                 width: `${size}px`,
                 height: `${size}px`,
