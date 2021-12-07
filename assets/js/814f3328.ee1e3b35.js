@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkfidelcoria=self.webpackChunkfidelcoria||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"DigiLog - The Single Hand Analog Clock with a Digital Enhancement","permalink":"/blog/2021/12/05/DigiLog"}]}')}}]);

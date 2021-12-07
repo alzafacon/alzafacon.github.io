@@ -2,11 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fidelcoria.com/blog</id>
     <title>Technical Journal Blog</title>
-    <updated>2021-12-05T00:00:00.000Z</updated>
+    <updated>2021-12-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fidelcoria.com/blog"/>
     <subtitle>Technical Journal Blog</subtitle>
     <icon>https://fidelcoria.com/https://emojicdn.elk.sh/🚮</icon>
+    <entry>
+        <title type="html"><![CDATA[Custom domain for GitHub Pages]]></title>
+        <id>Custom domain for GitHub Pages</id>
+        <link href="https://fidelcoria.com/blog/2021/12/06/GitHub_Pages"/>
+        <updated>2021-12-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This website is hosted on GitHub pages. The default domain is alzafacon.github.io since the source code is hosted on a repo of the same name.]]></summary>
+        <content type="html"><![CDATA[<p>This website is hosted on GitHub pages. The default domain is alzafacon.github.io since the source code is hosted on a repo of the same name. </p><p>I setup a custom domain following the docs:
+<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages</a></p><p>Here are some clarifications:</p><ul><li><p>You must enter the desired custom domain in the repo settings page before creating any DNS entries</p></li><li><p>The DNS configuration should be as follows (I used namecheap.com)</p></li></ul><pre><code>ALIAS
+Host: @
+Target: alzafacon.github.io.
+
+CNAME
+Host: www
+Target: alzafacon.github.io.
+</code></pre><p>I also setup alzafacon.com to redirect to fidelcoria.com</p><pre><code>URL Redirect
+Host: @
+Destination URL: https://fidelcoria.com
+Unmasked
+</code></pre>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[DigiLog - The Single Hand Analog Clock with a Digital Enhancement]]></title>
         <id>DigiLog - The Single Hand Analog Clock with a Digital Enhancement</id>

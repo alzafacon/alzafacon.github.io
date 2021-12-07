@@ -4,9 +4,29 @@
         <title>Technical Journal Blog</title>
         <link>https://fidelcoria.com/blog</link>
         <description>Technical Journal Blog</description>
-        <lastBuildDate>Sun, 05 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[Custom domain for GitHub Pages]]></title>
+            <link>https://fidelcoria.com/blog/2021/12/06/GitHub_Pages</link>
+            <guid>Custom domain for GitHub Pages</guid>
+            <pubDate>Mon, 06 Dec 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[This website is hosted on GitHub pages. The default domain is alzafacon.github.io since the source code is hosted on a repo of the same name.]]></description>
+            <content:encoded><![CDATA[<p>This website is hosted on GitHub pages. The default domain is alzafacon.github.io since the source code is hosted on a repo of the same name. </p><p>I setup a custom domain following the docs:
+<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages</a></p><p>Here are some clarifications:</p><ul><li><p>You must enter the desired custom domain in the repo settings page before creating any DNS entries</p></li><li><p>The DNS configuration should be as follows (I used namecheap.com)</p></li></ul><pre><code>ALIAS
+Host: @
+Target: alzafacon.github.io.
+
+CNAME
+Host: www
+Target: alzafacon.github.io.
+</code></pre><p>I also setup alzafacon.com to redirect to fidelcoria.com</p><pre><code>URL Redirect
+Host: @
+Destination URL: https://fidelcoria.com
+Unmasked
+</code></pre>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[DigiLog - The Single Hand Analog Clock with a Digital Enhancement]]></title>
             <link>https://fidelcoria.com/blog/2021/12/05/DigiLog</link>
