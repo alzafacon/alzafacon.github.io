@@ -2,11 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fidelcoria.com/blog</id>
     <title>Technical Journal Blog</title>
-    <updated>2021-12-06T00:00:00.000Z</updated>
+    <updated>2021-12-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fidelcoria.com/blog"/>
     <subtitle>Technical Journal Blog</subtitle>
     <icon>https://fidelcoria.com/https://emojicdn.elk.sh/🚮</icon>
+    <entry>
+        <title type="html"><![CDATA[Useless Machine - LEGO Technic]]></title>
+        <id>Useless Machine - LEGO Technic</id>
+        <link href="https://fidelcoria.com/blog/2021/12/16/Lego_Useless_Machine"/>
+        <updated>2021-12-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The purpose of a Useless Machine is to turn itself off when activated. Kits and built examples are available for purchase. While researching I found LEGO models but without kits or instructions.]]></summary>
+        <content type="html"><![CDATA[<p>The purpose of a Useless Machine is to turn itself off when activated. Kits and built examples are available for purchase. While researching I found LEGO models but without kits or instructions.</p><p>Challenge accepted!</p><p>I completed the model in March of 2017 and revised it today.</p><p>Without a parts list or instructions I decided to reverse engineer the device from the following video:
+<a href="https://www.youtube.com/watch?v=HAk-rhvZe2w">[011] Lego Technic - Useless Machine</a></p><p>I created a model using LEGO Digital Designer (LDD) before buying the parts. <a href="./UselessMachine.lxf">Download the LXF model</a></p><p>Using LDD I generated a PDF with building instructions and a parts list at the end.
+<a href="./UselessMachineInstructions.pdf">Download the PDF instructions</a></p><p>Here is the model at the final step of assembly</p><p><img src="./Step84.png" alt="Final Step from instructions"/></p>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Custom domain for GitHub Pages]]></title>
         <id>Custom domain for GitHub Pages</id>
