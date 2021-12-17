@@ -5,6 +5,8 @@ This website is hosted on GitHub pages. The default domain is alzafacon.github.i
 I setup a custom domain following the docs: 
 https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages
 
+<!--truncate-->
+
 Here are some clarifications:
 
 - You must enter the desired custom domain in the repo settings page before creating any DNS entries
