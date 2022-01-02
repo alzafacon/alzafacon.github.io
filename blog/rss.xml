@@ -18,20 +18,24 @@
 <a href="./UselessMachineInstructions.pdf">Download the PDF instructions</a></p><p>Here is the model at the final step of assembly</p><p><img src="./Step84.png" alt="Final Step from instructions"/></p>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[Custom domain for GitHub Pages]]></title>
+            <title><![CDATA[Custom Apex Domain for GitHub Pages]]></title>
             <link>https://fidelcoria.com/blog/2021/12/06/GitHub_Pages</link>
-            <guid>Custom domain for GitHub Pages</guid>
+            <guid>Custom Apex Domain for GitHub Pages</guid>
             <pubDate>Mon, 06 Dec 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[This website is hosted on GitHub pages. The default domain is alzafacon.github.io since the source code is hosted on a repo of the same name.]]></description>
-            <content:encoded><![CDATA[<p>This website is hosted on GitHub pages. The default domain is alzafacon.github.io since the source code is hosted on a repo of the same name. </p><p>I setup a custom domain following the docs:
-<a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages</a></p><p>Here are some clarifications:</p><ul><li><p>You must enter the desired custom domain in the repo settings page before creating any DNS entries</p></li><li><p>The DNS configuration should be as follows (I used namecheap.com)</p></li></ul><pre><code>ALIAS
+            <description><![CDATA[I'll explain how I made the DNS records for an apex domain (fidelcoria.com) with a redirect from www.fidelcoria.com to fidelcoria.com.]]></description>
+            <content:encoded><![CDATA[<p>I&#x27;ll explain how I made the DNS records for an apex domain (fidelcoria.com) with a redirect from <a href="http://www.fidelcoria.com">www.fidelcoria.com</a> to fidelcoria.com.</p><p>If you&#x27;re new to GitHub Pages visit <a href="https://pages.github.com/">pages.github.com</a> to learn the basics.</p><h2>TL;DR</h2><p>Here are the DNS records. The host values for the DNS records were the tricky part to figure out. </p><pre><code>ALIAS
 Host: @
 Target: alzafacon.github.io.
-
-CNAME
+</code></pre><pre><code>CNAME
 Host: www
 Target: alzafacon.github.io.
-</code></pre><p>I also setup alzafacon.com to redirect to fidelcoria.com</p><pre><code>URL Redirect
+</code></pre><h2>The devil is in the details</h2><p>I find the official documentation to be unclear or confusing in some parts, but I don&#x27;t blame them. The internet is complicated and the GitHub writers are trying to make the docs helpful even for beginners.</p><p>The long and short of it is that the steps (for apex domain with https and www) are in the docs <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-an-apex-domain">here</a>. Unfortunately the DNS instructions are confusing.</p><p>Here are the steps I had to follow:</p><ul><li><p>Enter your desired custom domain in the repo settings page (<strong>before</strong> creating any DNS entries)</p><p> I used fidelcoria.com (without the leading <code>www.</code>)</p><p> Doing this will configure a CNAME file on your GitHub Pages branch</p></li><li><p>Create an ALIAS record via your DNS provider</p><p>The docs say &quot;<code>To create an ALIAS or ANAME record, point your apex domain to the default domain for your site</code>&quot;.</p><p>The <code>apex domain</code> did not work. Instead I had to use <code>@</code>, which is used to represent the &quot;bare domain&quot; in DNS records.</p><pre><code>ALIAS
+Host: @
+Target: alzafacon.github.io.
+</code></pre></li><li><p>Create a CNAME record via your DNS provider</p><p>The docs say &quot;<code>Navigate to your DNS provider and create a CNAME record that points www.example.com to the default domain for your site</code>&quot;</p><p><code>www.fidelcoria.com</code> did not work. Instead I had to use <code>www</code>.</p><pre><code>CNAME
+Host: www
+Target: alzafacon.github.io.
+</code></pre></li></ul><p>DNS changes can take up to 24 hours to propagate. This makes it hard to tell if something is wrong or just needs more time.</p><p>I learned the best approach for me was to get informed, decide what I want, make a plan, try it out, observe patiently, then iterate.</p><h2>Extra DNS setup</h2><p>I also setup alzafacon.com to redirect to fidelcoria.com</p><pre><code>URL Redirect
 Host: @
 Destination URL: https://fidelcoria.com
 Unmasked
