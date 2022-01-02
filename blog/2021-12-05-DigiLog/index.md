@@ -1,4 +1,4 @@
-# DigiLog - Digital remaining of a Single Hand Analog Timepiece
+# DigiLog - Digital re-imagining of a Single Hand Analog Timepiece
 
 Clocks and watches originally had a single hand, but the minutes were hard to read. Thus the minute hand was introduced.
 
