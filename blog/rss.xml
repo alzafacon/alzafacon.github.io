@@ -12,7 +12,7 @@
             <link>https://fidelcoria.com/blog/2022/01/02/K8S-print-secrets</link>
             <guid>/2022/01/02/K8S-print-secrets</guid>
             <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[<pre><code>$ kubectl get secret &lt;SECRET_NAME&gt; -o jsonpath=&quot;{.data.&lt;DATA&gt;}&quot; | base64 --decode
+            <content:encoded><![CDATA[<pre><code>kubectl get secret &lt;SECRET_NAME&gt; -o jsonpath=&quot;{.data.&lt;DATA&gt;}&quot; | base64 --decode
 </code></pre>]]></content:encoded>
         </item>
         <item>
