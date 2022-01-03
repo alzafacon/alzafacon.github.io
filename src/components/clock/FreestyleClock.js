@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { BigSlider } from "./BigSlider"
-import { DigiLogZoom } from "./ZoomClock"
+import { ZoomClock } from "./ZoomClock"
 import Grid from '@material-ui/core/Grid'
 import SpeedIcon from '@material-ui/icons/Speed'
 import { DateTime } from "luxon"
@@ -10,7 +10,7 @@ export const FreestyleClock = ({ size = 200 }) => {
 
     return (
         <div style={{ width: size }}>
-            <DigiLogZoom size={size} hour={Math.floor(totalMinutes / 60)} minute={totalMinutes % 60} />
+            <ZoomClock size={size} hour={Math.floor(totalMinutes / 60)} minute={totalMinutes % 60} />
             <Grid container spacing={2}>
                 <Grid item>
                     <SpeedIcon onClick={() => {
