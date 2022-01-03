@@ -52,6 +52,10 @@ It might help to think of the midpoint in polar coordinates as (`Sr`, `tau`). Ye
     dx = Sr cos(tau)
     dy = Sr sin(tau)
 
+import { FreestyleClock } from '../../src/components/clock/FreestyleClock.js';
+
+<FreestyleClock />
+
 ## Course and Fine adjustment of r
 
 Using a slider to change `r` linearly is a bad user experience. At low zoom the clock face moves very little and at high zoom the clock face moves too much. If you graph the scale function It is easy to see why this happens. `S(r)` grows quickly and is also concave up.
