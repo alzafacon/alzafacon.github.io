@@ -76,6 +76,10 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/alzafacon',
               },
+              {
+                label: 'LinkedIn',
+                href: 'https://www.linkedin.com/in/fidelcoria',
+              },
             ],
           },
         ],
