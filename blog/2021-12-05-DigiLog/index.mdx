@@ -1,0 +1,81 @@
+# DigiLog: Digital Zoom for a Single Hand Analog Timepiece
+
+Clocks and watches originally had a single hand so the minutes were hard to read. Thus the minute hand was introduced.
+
+Another way to read the minutes with a single hand is by zooming into the section of the clock where the hour hand points to the time. For example, at 6:30 the tick marks will show the hour hand to be half way between 6 and 7. While at 7:05 you can zoom in to see the tick marks showing 5 minutes past 7.
+
+<!--truncate-->
+
+## The Math
+
+| | Definitions |
+| - | - |
+| Viewport   | circular window of fixed size |
+| `D` | viewport diameter
+| `R`        | viewport radius |
+| Clock face | the numbers, tick markings, and the hour hand together |
+| `r` | distance between viewport center and midpoint of chord to be zoomed (chord offset) |
+| `tau` | time "angle" in radians of hour hand from polar axis (3 o'clock) |
+| `a` | length of the chord |
+| `S` | scale factor |
+
+<img 
+  alt="chord diagram"
+  className="fix-img-fuzziness"
+  src={require("./ChordDiagram_1000.gif").default} 
+  />
+
+> SOURCE: Weisstein, Eric W. "Chord." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Chord.html
+
+Zooming the clock face is simply done by enlarging a circular segment centered where the hour hand is pointing. In the image above the time would be 1:30.
+
+I take the chord and enlarge it to be congruent with the view port diameter. So to scale the chord from `a` to `D` the whole clock face must be scaled by `D/a` (i.e. `a(D/a) = D`). 
+
+The chord is determined when the user chooses `r`. We need an expression for the value of `a` given `r`.
+
+Easy! Pythagorean theorem: 
+
+    R^2 = r^2 + (a/2)^2
+    a/2 = sqrt(R^2 - r^2)
+     a  = 2sqrt(R^2 - r^2)
+
+So now we have the scale factor:
+
+    S = D/a 
+      = 2R / (2sqrt(R^2 - r^2))
+      = R / sqrt(R^2 - r^2)
+
+Next we need to slide the midpoint of the chord onto the center of the viewport.
+
+It might help to think of the midpoint in polar coordinates as (`Sr`, `tau`). Yes, I scaled by S. With a simple change of coordinates we have:
+
+    dx = Sr cos(tau)
+    dy = Sr sin(tau)
+
+## Course and Fine adjustment of r
+
+Using a slider to change `r` linearly is a bad user experience. At low zoom the clock face moves very little and at high zoom the clock face moves too much. If you graph the scale function It is easy to see why this happens. `S(r)` grows quickly and is also concave up.
+
+It would be better for the value of r to change more quickly at low zoom (course adjustment) and more slowly at high zoom (fine adjustment).
+
+This can be done by letting the user input a zoom value rather than let them input `r` directly. Now we can map the zoom value any way we want with a function `f(z) = r`.
+
+I would like to take `z` to be in `[0,1]` and `f(1) = p`, where `0 < p < 1` and `pR` is the max chord-offset allowed. `f` should be monotonically increasing, concave down, with an inflection point somewhere around 0.1, and preferably asymptotic to `1`. Notice `f` will be multiplied by `R` to give the final chord offset.
+
+A good candidate function is `1 - 1/(z + 1)`.
+
+So I'll start applying transformations to get the desired properties.
+
+    f(1) = p = 1 - 1/(kz + 1)
+    ... algebra ...
+    k = p / (1-p)
+    
+    f(z) = 1 - 1/(pz/(1-p) + 1)
+           ... algebra ...
+         = 1 - (1-p)/(pz + 1 - p)
+           ... algebra ...
+         = pz / (pz + 1 - p)
+
+Finally to get the actual chord offset we take `Rf(z)`. 
+
+That's all folks!

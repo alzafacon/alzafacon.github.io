@@ -26,3 +26,7 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+html[data-theme='dark'] .fix-img-fuzziness {
+  filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}

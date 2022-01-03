@@ -23,15 +23,15 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
     const time = calcTimeRadians(hour, minute)
 
     const clampedZoom = utils.clamp(zoom, 0, utils.ZOOM_RESOLUTION)
-    const alpha = utils.getAlpha(clampedZoom)
+    const chordOffset = utils.getChordOffset(clampedZoom, radius)
 
     // adjustments
     // use zoom to dilate svg
-    const scaleFactor = utils.getScaleFactor(alpha)
+    const scaleFactor = utils.getScaleFactor(chordOffset, radius)
 
     // use time and zoom to translate face
-    const dx = utils.getDeltaX(radius, time, alpha)
-    const dy = utils.getDeltaY(radius, time, alpha)
+    const dx = utils.getDeltaX(scaleFactor * chordOffset, time) 
+    const dy = utils.getDeltaY(scaleFactor * chordOffset, time) 
 
     return (
         <div style={{ position: 'relative', width: `${size}px`, height: `${size}px`, overflow: 'hidden', borderRadius: "50%", zIndex: 1, backgroundColor: "white" }}>

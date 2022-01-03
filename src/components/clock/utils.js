@@ -1,24 +1,30 @@
 export const ZOOM_RESOLUTION = 100
+const p = 0.93 // max chord offset as percent of view port radius
 
-const getK = (alphaRightBound = Math.PI / 6, resolution = ZOOM_RESOLUTION) =>
-    (1 / alphaRightBound - 2 / Math.PI) / resolution
+// f: [0,1] -> [0,p]
+const f = (z) => {
+    // the docs explain where this comes from
+    return p*z / (p*z + 1 - p)
+}
 
-const k = getK()
+// distance between viewport center and chord midpoint
+export const getChordOffset = (zoom, radius) => {
+    // x: [0, 1]
+    const z = zoom / ZOOM_RESOLUTION;
+    return radius * f(z)
+}
 
-// alpha is half the zoom segment angle
-export const getAlpha = (zoom) =>
-    1 / (zoom * k + 2 / Math.PI)
+const getChordHalfLength = (chordOffset, radius) =>
+    Math.sqrt(radius*radius - chordOffset*chordOffset)
 
-export const getScaleFactor = (alpha) =>
-    1 / Math.sin(alpha)
+export const getScaleFactor = (chordOffset, radius) =>
+    radius / getChordHalfLength(chordOffset, radius)
 
-// delta x is offset in x direction 
-export const getDeltaX = (R, tau, alpha) =>
-    R * Math.cos(tau) * Math.cos(alpha) / Math.sin(alpha)
+export const getDeltaX = (chordOffset, tau) =>
+    chordOffset * Math.cos(tau)
 
-// delta y is offset in y direction
-export const getDeltaY = (R, tau, alpha) =>
-    R * Math.sin(tau) * Math.cos(alpha) / Math.sin(alpha)
+export const getDeltaY = (chordOffset, tau) =>
+    chordOffset * Math.sin(tau)
 
 export const deg2rad = (degrees) =>
     degrees * Math.PI / 180;
@@ -26,4 +32,5 @@ export const deg2rad = (degrees) =>
 export const rad2deg = (radians) =>
     radians * 180 / Math.PI
 
-export const clamp = (n, min, max) => Math.min(Math.max(n, min), max)
+export const clamp = (n, min, max) =>
+    Math.min(Math.max(n, min), max)
