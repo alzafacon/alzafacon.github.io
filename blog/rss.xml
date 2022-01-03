@@ -4,13 +4,21 @@
         <title>Technical Journal Blog</title>
         <link>https://fidelcoria.com/blog</link>
         <description>Technical Journal Blog</description>
-        <lastBuildDate>Thu, 16 Dec 2021 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 02 Jan 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <item>
-            <title><![CDATA[Useless Machine - LEGO Technic]]></title>
+            <title><![CDATA[K8s: How to print Opaque Secrets]]></title>
+            <link>https://fidelcoria.com/blog/2022/01/02/K8S-print-secrets</link>
+            <guid>/2022/01/02/K8S-print-secrets</guid>
+            <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[<pre><code>$ kubectl get secret &lt;SECRET_NAME&gt; -o jsonpath=&quot;{.data.&lt;DATA&gt;}&quot; | base64 --decode
+</code></pre>]]></content:encoded>
+        </item>
+        <item>
+            <title><![CDATA[Useless Machine with LEGO Technic]]></title>
             <link>https://fidelcoria.com/blog/2021/12/16/Lego_Useless_Machine</link>
-            <guid>Useless Machine - LEGO Technic</guid>
+            <guid>/2021/12/16/Lego_Useless_Machine</guid>
             <pubDate>Thu, 16 Dec 2021 00:00:00 GMT</pubDate>
             <description><![CDATA[The purpose of a Useless Machine is to turn itself off when activated. Kits and built examples are available for purchase. While researching I found LEGO models but without kits or instructions.]]></description>
             <content:encoded><![CDATA[<p>The purpose of a Useless Machine is to turn itself off when activated. Kits and built examples are available for purchase. While researching I found LEGO models but without kits or instructions.</p><p>Challenge accepted!</p><p>I completed the model in March of 2017 and revised it today.</p><p>Without a parts list or instructions I decided to reverse engineer the device from the following video:
@@ -20,10 +28,10 @@
         <item>
             <title><![CDATA[Custom Apex Domain for GitHub Pages]]></title>
             <link>https://fidelcoria.com/blog/2021/12/06/GitHub_Pages</link>
-            <guid>Custom Apex Domain for GitHub Pages</guid>
+            <guid>/2021/12/06/GitHub_Pages</guid>
             <pubDate>Mon, 06 Dec 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[I'll explain how I made the DNS records for an apex domain (fidelcoria.com) with a redirect from www.fidelcoria.com to fidelcoria.com.]]></description>
-            <content:encoded><![CDATA[<p>I&#x27;ll explain how I made the DNS records for an apex domain (fidelcoria.com) with a redirect from <a href="http://www.fidelcoria.com">www.fidelcoria.com</a> to fidelcoria.com.</p><p>If you&#x27;re new to GitHub Pages visit <a href="https://pages.github.com/">pages.github.com</a> to learn the basics.</p><h2>TL;DR</h2><p>Here are the DNS records. The host values for the DNS records were the tricky part to figure out. </p><pre><code>ALIAS
+            <description><![CDATA[I'll explain how I setup the DNS records for an apex domain (fidelcoria.com) with a redirect from www.fidelcoria.com to fidelcoria.com.]]></description>
+            <content:encoded><![CDATA[<p>I&#x27;ll explain how I setup the DNS records for an apex domain (fidelcoria.com) with a redirect from <a href="http://www.fidelcoria.com">www.fidelcoria.com</a> to fidelcoria.com.</p><p>If you&#x27;re new to GitHub Pages visit <a href="https://pages.github.com/">pages.github.com</a> to learn the basics.</p><h2>TL;DR</h2><p>Here are the DNS records. The host values for the DNS records were the tricky part to figure out. </p><pre><code>ALIAS
 Host: @
 Target: alzafacon.github.io.
 </code></pre><pre><code>CNAME
@@ -42,12 +50,11 @@ Unmasked
 </code></pre>]]></content:encoded>
         </item>
         <item>
-            <title><![CDATA[DigiLog - Digital re-imagining of a Single Hand Analog Timepiece]]></title>
+            <title><![CDATA[DigiLog: Digital Zoom for a Single Hand Analog Timepiece]]></title>
             <link>https://fidelcoria.com/blog/2021/12/05/DigiLog</link>
-            <guid>DigiLog - Digital re-imagining of a Single Hand Analog Timepiece</guid>
+            <guid>/2021/12/05/DigiLog</guid>
             <pubDate>Sun, 05 Dec 2021 00:00:00 GMT</pubDate>
-            <description><![CDATA[Clocks and watches originally had a single hand, but the minutes were hard to read. Thus the minute hand was introduced.]]></description>
-            <content:encoded><![CDATA[<p>Clocks and watches originally had a single hand, but the minutes were hard to read. Thus the minute hand was introduced.</p><p>Another way to read the minutes with a single hand is by zooming into the section of the clock where the hour hand points to the time. For example, at 6:30 the tick marks will show the hour hand to be half way between 6 and 7. While at 7:05 you can zoom in to see the tick marks showing 5 minutes past 7.</p><h2>The Math</h2><table><thead><tr><th></th><th>Definitions</th></tr></thead><tbody><tr><td>Viewport</td><td>window on circular clock</td></tr><tr><td><code>R</code></td><td>viewport radius</td></tr><tr><td>Clock face</td><td>the numbers and tick markings as a group</td></tr><tr><td><code>tau</code></td><td>angle of hour hand from pole (3 o&#x27;clock)</td></tr><tr><td><code>alpha</code></td><td>half the clock face segment angle to be enlarged</td></tr></tbody></table><p>Zooming the clock face means choosing a clock face segment to enlarge. The clock face segment has a chord.</p><p>Let <code>alpha</code> be half the clock face segment angle.</p><p>Zooming is done by dilating and translating the chord to be the viewport diameter.</p><p>Let <code>r</code> be half the chord length. Therefore <code>r</code> must be dilated by a factor of <code>R/r</code> to become <code>R</code> (i.e. <code>r</code> * <code>R/r</code> = <code>R</code>).</p><p>Since <code>sin(alpha) = r/R</code>. The scaling factor is <code>R/r = 1/sin(alpha)</code>.</p><p>Let <code>d</code> be the distance from viewport center to chord midpoint before scaling, <code>d = R * cos(alpha)</code>.</p><p>The translation offsets the in x- and y-direction before scaling are</p><ul><li><code>dx = cos(tau) * d = R * cos(tau) * cos(alpha)</code></li><li><code>dy = sin(tau) * d = R * sin(tau) * cos(alpha)</code></li></ul><p>After scaling</p><ul><li><code>dx&#x27; = R * cos(tau) * cos(alpha) / sin(alpha)</code></li><li><code>dy&#x27; = R * sin(tau) * cos(alpha) / sin(alpha)</code></li></ul><p><code>alpha</code> has interval <code>(0, pi/2]</code>. The left bound is open because <code>alpha = 0</code> means infinite zoom which is not useful to display.</p><p>To avoid the infinite zoom problem we introduce a zoom variable <code>z</code> and a function <code>f(z) = alpha</code> where <code>f: [0, inf) -&gt; [pi/2, 0)</code>. Notice <code>f(z)</code> approaches 0 asymptotically. </p><p>The most obvious such function is <code>f(z) = 1 / (z + 2/pi)</code>. An additional advantage of asymptotically approaching 0 is course adjustments at low zoom and fine adjustments at high zoom (i.e. the rate of change is greater near <code>z = 0</code> and less as <code>z</code> approaches <code>inf</code>).</p><p><code>[0, inf)</code> is not practical as an input range because of <code>inf</code>. So it is best to close the right bound at an arbitrary value. Naturally, the output interval right bound should also be closed at the desired maximum zoom. One such choice is <code>[0, 100] -&gt; [pi/2, pi/6]</code>. The most obvious such function is <code>g(z) = 1 / (k*z + 2/pi)</code> where the reader can find <code>k</code> as an exercise.</p>]]></content:encoded>
+            <description><![CDATA[Clocks and watches originally had a single hand so the minutes were hard to read. Thus the minute hand was introduced.]]></description>
         </item>
     </channel>
 </rss>
