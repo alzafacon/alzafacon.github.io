@@ -22,7 +22,8 @@ Another way to read the minutes with a single hand is by zooming into the sectio
 <img 
   alt="chord diagram"
   className="fix-img-fuzziness"
-  src={require("./ChordDiagram_1000.gif").default} 
+  src={require("./ChordDiagram_1000.gif").default}
+  style={{display: 'block', margin: 'auto', padding: '10px'}}
   />
 
 > SOURCE: Weisstein, Eric W. "Chord." From MathWorld--A Wolfram Web Resource. https://mathworld.wolfram.com/Chord.html
@@ -54,7 +55,9 @@ It might help to think of the midpoint in polar coordinates as (`Sr`, `tau`). Ye
 
 import { FreestyleClock } from '../../src/components/clock/FreestyleClock.js';
 
-<FreestyleClock />
+<div style={{margin: 'auto', width: '50%'}}>
+  <FreestyleClock />
+</div>
 
 ## Course and Fine adjustment of r
 

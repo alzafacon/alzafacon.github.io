@@ -9,7 +9,7 @@ export const FreestyleClock = ({ size = 200 }) => {
     const [totalMinutes, setTotalMinutes] = useState(0)
 
     return (
-        <div style={{ width: size }}>
+        <div style={{ width: size, margin: 'auto' }}>
             <ZoomClock size={size} hour={Math.floor(totalMinutes / 60)} minute={totalMinutes % 60} />
             <Grid container spacing={2}>
                 <Grid item>
