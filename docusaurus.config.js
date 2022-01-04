@@ -54,12 +54,9 @@ const config = {
       navbar: {
         title: 'Home',
         items: [
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/alzafacon',
-            label: 'GitHub',
-            position: 'right',
-          },
+          {to: '/blog', label: 'Blog'},
+          {to: '/phrases', label: 'Phrases'},
+          {to: '/toolbox', label: 'Toolbox'},
         ],
       },
       footer: {
@@ -68,10 +65,6 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/alzafacon',
