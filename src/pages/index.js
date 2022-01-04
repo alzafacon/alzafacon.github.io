@@ -1,24 +1,24 @@
 import React from 'react';
 import clsx from 'clsx';
+import useThemeContext from '@theme/hooks/useThemeContext';
 import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { isDarkTheme } = useThemeContext();
+
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className={clsx("container", styles.heroContrast)}>
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-      </div>
+        {isDarkTheme
+          ? <img src={"/img/starry_night_full.jpg"}  style={{'width': '100%'}}/>
+          : <img src={"https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg"}  />
+        }
     </header>
   );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout title='Fidel Coria'>
       <HomepageHeader />
