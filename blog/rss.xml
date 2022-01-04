@@ -4,17 +4,9 @@
         <title>Technical Journal Blog</title>
         <link>https://fidelcoria.com/blog</link>
         <description>Technical Journal Blog</description>
-        <lastBuildDate>Sun, 02 Jan 2022 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 16 Dec 2021 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <item>
-            <title><![CDATA[K8s: How to print Opaque Secrets]]></title>
-            <link>https://fidelcoria.com/blog/2022/01/02/K8S-print-secrets</link>
-            <guid>/2022/01/02/K8S-print-secrets</guid>
-            <pubDate>Sun, 02 Jan 2022 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[<pre><code>kubectl get secret &lt;SECRET_NAME&gt; -o jsonpath=&quot;{.data.&lt;DATA&gt;}&quot; | base64 --decode
-</code></pre>]]></content:encoded>
-        </item>
         <item>
             <title><![CDATA[Useless Machine with LEGO Technic]]></title>
             <link>https://fidelcoria.com/blog/2021/12/16/Lego_Useless_Machine</link>
