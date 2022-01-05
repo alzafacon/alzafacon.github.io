@@ -2,11 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fidelcoria.com/blog</id>
     <title>Technical Journal Blog</title>
-    <updated>2021-12-16T00:00:00.000Z</updated>
+    <updated>2022-01-05T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fidelcoria.com/blog"/>
     <subtitle>Technical Journal Blog</subtitle>
     <icon>https://fidelcoria.com/https://emojicdn.elk.sh/🚮</icon>
+    <entry>
+        <title type="html"><![CDATA[Python Quine]]></title>
+        <id>/2022/01/05/</id>
+        <link href="https://fidelcoria.com/blog/2022/01/05/"/>
+        <updated>2022-01-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A quine is a computer program which takes no input and produces a copy of its own source code as its only output.]]></summary>
+        <content type="html"><![CDATA[<p>A quine is a computer program which takes no input and produces a copy of its own source code as its only output.</p><p>I first read about this kind of program in an ACM article but I can&#x27;t remember which one.</p><p>Here is my solution</p><pre><code class="language-python">print(
+    &#x27;print({}.format({}))&#x27;.format(
+        &#x27;print({}.format({}))&#x27;
+    )
+)
+</code></pre>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Useless Machine with LEGO Technic]]></title>
         <id>/2021/12/16/Lego_Useless_Machine</id>
