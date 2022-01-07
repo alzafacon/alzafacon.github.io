@@ -13,3 +13,10 @@
 
 > Y’all can go to hell and I will go to Texas
 > > Davy Crockett
+
+<br/>
+
+> Premature optimization is the root of all evil.
+> > Sir Tony Hoare
+
+<br/>
