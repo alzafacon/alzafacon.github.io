@@ -4,6 +4,12 @@ Clocks and watches originally had a single hand so the minutes were hard to read
 
 Another way to read the minutes with a single hand is by zooming into the section of the clock where the hour hand points to the time. For example, at 6:30 the tick marks will show the hour hand to be half way between 6 and 7. While at 7:05 you can zoom in to see the tick marks showing 5 minutes past 7.
 
+import { FreestyleClock } from '../../src/components/clock/FreestyleClock.js';
+
+<div style={{margin: 'auto', width: '50%'}}>
+  <FreestyleClock />
+</div>
+
 <!--truncate-->
 
 ## The Math
@@ -52,12 +58,6 @@ It might help to think of the midpoint in polar coordinates as (`Sr`, `tau`). Ye
 
     dx = Sr cos(tau)
     dy = Sr sin(tau)
-
-import { FreestyleClock } from '../../src/components/clock/FreestyleClock.js';
-
-<div style={{margin: 'auto', width: '50%'}}>
-  <FreestyleClock />
-</div>
 
 ## Course and Fine adjustment of r
 
