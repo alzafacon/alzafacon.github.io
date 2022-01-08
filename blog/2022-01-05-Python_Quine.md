@@ -7,9 +7,5 @@ I first read about this kind of program in an ACM article but I can't remember w
 Here is my solution
 
 ```python
-print(
-    'print({}.format({}))'.format(
-        'print({}.format({}))'
-    )
-)
+print('print({}.format({}))'.format('print({}.format({}))'))
 ```
