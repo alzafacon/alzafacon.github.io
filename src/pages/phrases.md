@@ -20,3 +20,7 @@
 > > Sir Tony Hoare
 
 <br/>
+
+> Mal de muchos, consuelo de tontos (Spanish, Affliction of the masses, comfort to the dumb asses)
+
+<br/>
