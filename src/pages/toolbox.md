@@ -2,6 +2,11 @@
 Useful little things are easy to lose
 
 ---
+## Git debug ignore and excludes
+```
+git check-ignore -v <FILE_NAME>
+```
+---
 ## K8S: How to print Opaque Secrets
 ```
 kubectl get secret <SECRET_NAME> -o jsonpath="{.data.<DATA>}" | base64 --decode
