@@ -4,7 +4,7 @@
 <br/>
 
 > Kontext ist könig
->> (German, Context is king)
+>> German, Context is king
 >
 > **Nabeel Kandah**
 
@@ -31,10 +31,10 @@
 <br/>
 
 > Mal de muchos, consuelo de tontos
->> (Spanish, Affliction of the masses, comfort to the dumb asses)
+>> Spanish, Affliction of the masses, comfort to the dumb asses
 
 <br/>
 <br/>
 
 > ¿Manejar borracho? ¡No seas tonto Muchacho!
->> (Spanish, Driving Drunk? Don't be stupid!)
+>> Spanish, Driving Drunk? Don't be stupid!
