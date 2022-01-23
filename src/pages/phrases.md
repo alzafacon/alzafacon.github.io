@@ -1,26 +1,37 @@
 # Phrases / Sayings / Quotes
 
 <br/>
+<br/>
 
-> Kontext ist könig (German, Context is king)
-> > Nabeel Kandah
+> Kontext ist könig
+>> (German, Context is king)
+>
+> **Nabeel Kandah**
 
+<br/>
 <br/>
 
 > There are no free lunches
 
 <br/>
+<br/>
 
 > Y’all can go to hell and I will go to Texas
-> > Davy Crockett
+>
+> **Davy Crockett**
 
+<br/>
 <br/>
 
 > Premature optimization is the root of all evil.
-> > Sir Tony Hoare
+>
+> **Sir Tony Hoare**
 
 <br/>
+<br/>
 
-> Mal de muchos, consuelo de tontos (Spanish, Affliction of the masses, comfort to the dumb asses)
+> Mal de muchos, consuelo de tontos
+>> (Spanish, Affliction of the masses, comfort to the dumb asses)
 
+<br/>
 <br/>
