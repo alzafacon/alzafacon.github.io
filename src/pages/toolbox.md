@@ -2,6 +2,9 @@
 Useful little things are easy to lose
 
 ---
+## macOS: Always show hidden files
+`defaults write com.apple.finder AppleShowAllFiles -bool true`
+---
 ## Git debug ignore and excludes
 ```
 git check-ignore -v <FILE_NAME>
