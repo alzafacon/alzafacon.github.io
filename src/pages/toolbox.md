@@ -2,6 +2,22 @@
 Useful little things are easy to lose
 
 ---
+## Git SSH for multiple remote servers
+~/.ssh/config:
+```
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/personal_github
+
+Host github.company.com
+  HostName github.company.com
+  User git
+  IdentityFile ~/.ssh/work_github
+```
+SOURCE: https://www.freecodecamp.org/news/manage-multiple-github-accounts-the-ssh-way-2dadc30ccaca/
+
+---
 ## macOS: Always show hidden files
 `defaults write com.apple.finder AppleShowAllFiles -bool true`
 ---
