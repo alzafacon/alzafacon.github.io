@@ -2,6 +2,14 @@
 Useful little things are easy to lose
 
 ---
+## Git: Step thorugh commits on a branch
+Walk through commits on a branch by jumping back a number of commits from the branch head.
+```
+git checkout <branch-name>~<number>
+git checkout spam_and_eggs~5
+git checkout spam_and_eggs~6
+```
+---
 ## Git SSH for multiple remote servers
 ~/.ssh/config:
 ```
