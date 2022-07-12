@@ -51,7 +51,7 @@
 <br/>
 
 > Every action you take is a vote for the type of person you wish to become. No single instance will transform your beliefs, but as the votes build up, so does the evidence of your new identity.
->> James Clear
+> **James Clear**
 
 <br/>
 <br/>
