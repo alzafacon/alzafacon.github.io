@@ -2,7 +2,12 @@
 Useful little things are easy to lose
 
 ---
-## Git: Step thorugh commits on a branch
+## Node: get package.json version
+```
+$ node -p "require('./package.json').version"
+```
+---
+## Git: Step through commits on a branch
 Walk through commits on a branch by jumping back a number of commits from the branch head.
 ```
 git checkout <branch-name>~<number>
