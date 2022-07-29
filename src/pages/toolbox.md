@@ -1,6 +1,19 @@
 # Toolbox of Software Developer Tricks, etc.
 Useful little things are easy to lose
 
+___
+## Ruby Gems: execute specific version from several installed
+Multiple versions of a Ruby Gem can be installed for use from the command line. For example to see which versions of bundler you have 
+
+```
+gem list bundler
+```
+
+To use the version you want put the version number between underscores right after the gem command line name (note this may be different than the gem name).
+
+```
+bundle _2.3.4_ install
+```
 ---
 ## Node: get package.json version
 ```
