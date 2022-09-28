@@ -1,6 +1,15 @@
 # Toolbox of Software Developer Tricks, etc.
 Useful little things are easy to lose
 
+---
+## JavaScript thread sleep
+```
+async function sleep(ms) {
+  await new Promise(resolve =>
+    setTimeout(resolve, ms)
+  )
+}
+```
 ___
 ## Ruby Gems: execute specific version from several installed
 Multiple versions of a Ruby Gem can be installed for use from the command line. For example to see which versions of bundler you have 
