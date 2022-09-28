@@ -1,16 +1,16 @@
 import React from 'react';
 import clsx from 'clsx';
-import useThemeContext from '@theme/hooks/useThemeContext';
+import {useColorMode} from '@docusaurus/theme-common';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
 
 function HomepageHeader() {
-  const { isDarkTheme } = useThemeContext();
+  const { colorMode, setColorMode } = useColorMode();
 
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-        {isDarkTheme
+        {colorMode === 'dark'
           ? <img src={"/img/starry_night_full.jpg"}  style={{'width': '100%'}}/>
           : <img src={"https://images.metmuseum.org/CRDImages/ep/original/DT1567.jpg"}  />
         }

@@ -47,10 +47,6 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'dark',
-        switchConfig: {
-          darkIcon: '😴',
-          lightIcon: '😎',
-        }
       },
       navbar: {
         title: 'Home',
