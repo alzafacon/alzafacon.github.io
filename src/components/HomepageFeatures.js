@@ -14,6 +14,18 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <Grid container justifyContent="center">
+        <Grid item xs={12} sm={12} md={12}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <div>
+              One-handed clocks used to be a thing. So I made these.
+              <br/>
+              Checkout <a href='/blog/2021/12/05/DigiLog'>this post</a> for a look under the clock face.
+            </div>
+          </div>
+          <br/>
+          <br/>
+        </Grid>
+
         <Grid item xs={12} sm={6} md={3}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <WallClock timeZone="local" label="Local"/>
