@@ -39,7 +39,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                 width: `${size}px`,
                 height: `${size}px`,
                 transform: `translate(${-dx}px, ${dy}px)`,
-                transition: 'all 0.1s linear',
+                // transition: 'all 0.1s linear',
             }}>
                 {/* img will float in center of container for scaling on the center point */}
                 <ClockFace
@@ -51,7 +51,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                         width: `${size}px`,
                         height: `${size}px`,
                         transform: `scale(${scaleFactor})`,
-                        transition: 'all 0.1s linear',
+                        // transition: 'all 0.1s linear',
                         userSelect: 'none',
                         pointerEvents: 'none',
                     }}
@@ -62,7 +62,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                 width: `${size}px`,
                 height: `${size}px`,
                 transform: `translate(${-dx}px, ${dy}px)`,
-                transition: 'all 0.1s linear',
+                // transition: 'all 0.1s linear',
             }}>
                 {/* img will float in center of container for scaling on the center point */}
                 <HourHand
@@ -74,7 +74,7 @@ export const DigiLog = ({ size = 200, zoom = 0, hour = 0, minute = 0 }) => {
                         width: `${size}px`,
                         height: `${size}px`,
                         transform: `scale(${scaleFactor}) rotate(${90 - utils.rad2deg(time).toFixed(1)}deg)`,
-                        transition: 'all 0.1s linear',
+                        // transition: 'all 0.1s linear',
                         userSelect: 'none',
                         pointerEvents: 'none',
                     }}
