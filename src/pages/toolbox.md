@@ -54,7 +54,9 @@ SOURCE: https://www.freecodecamp.org/news/manage-multiple-github-accounts-the-ss
 
 ---
 ## macOS: Always show hidden files
-`defaults write com.apple.finder AppleShowAllFiles -bool true`
+```
+defaults write com.apple.finder AppleShowAllFiles -bool true
+```
 ---
 ## Git debug ignore and excludes
 ```
