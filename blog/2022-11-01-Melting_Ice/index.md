@@ -9,7 +9,8 @@ reach the same conclusion.
 <!--truncate-->
 
 ## Simplifying assumptions
-- No salt water
+- No saltwater
+- Ice is pure water
 - No condensation
 - No evaporation
 
