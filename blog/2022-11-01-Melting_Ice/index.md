@@ -11,6 +11,7 @@ reach the same conclusion.
 ## Simplifying assumptions
 - No saltwater
 - Ice is pure water
+- Ice is free-floating
 - No condensation
 - No evaporation
 
