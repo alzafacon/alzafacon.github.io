@@ -8,7 +8,7 @@ reach the same conclusion.
 
 <!--truncate-->
 
-## Simplifying Assumptions
+## Simplifying assumptions
 - No salt water
 - No condensation
 - No evaporation
@@ -45,3 +45,13 @@ water... then the object sinks.
 In other words, objects denser than water sink, objects less dense than water
 float.
 
+## Back to saltwater
+
+In the previous discussion the medium of floatation was the same as the object
+of displacement. In other words: ice (frozen h20) is floating in water (liquid 
+h20). Liquid water has the same properties as liquid water; including density.
+
+So what happens to the fluid level when ice (frozen h20) floating in saltwater
+melts?
+
+I leave this as an exercise for the reader.
