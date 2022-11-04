@@ -50,10 +50,10 @@ float.
 ## Back to saltwater
 
 In the previous discussion the medium of floatation was the same as the object
-of displacement. In other words: ice (frozen h20) is floating in water (liquid 
-h20). Obviously, once the ice melts it's all water with the same properties, including density.
+of displacement. In other words: ice (frozen H2O) is floating in water (liquid 
+H2O). Obviously, once the ice melts it's all water with the same properties, including density.
 
-So what happens to the fluid level when ice (frozen h20) floating in saltwater
+So what happens to the fluid level when ice (frozen H2O) floating in saltwater
 melts?
 
 I leave this as an exercise for the reader.
