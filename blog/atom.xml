@@ -29,10 +29,10 @@ is displaced the greater reaction force. You are pushing against gravity!</p><p>
 its mass. That object will sink if the force exerted by the object is greater
 than the buoyant force. In other words: if the mass of the object is greater
 than the mass of the object's volume in water then the object sinks. </p><p>If the mass of an object is less than the mass of the object's volume in
-water... then the object sinks.</p><p>In other words, objects denser than water sink, objects less dense than water
+water... then the object floats.</p><p>In other words, objects denser than water sink, objects less dense than water
 float.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="back-to-saltwater">Back to saltwater<a class="hash-link" href="#back-to-saltwater" title="Direct link to heading">​</a></h2><p>In the previous discussion the medium of floatation was the same as the object
 of displacement. In other words: ice (frozen h20) is floating in water (liquid
-h20). Liquid water has the same properties as liquid water; including density.</p><p>So what happens to the fluid level when ice (frozen h20) floating in saltwater
+h20). Obviously, once the ice melts it's all water with the same properties, including density.</p><p>So what happens to the fluid level when ice (frozen h20) floating in saltwater
 melts?</p><p>I leave this as an exercise for the reader.</p>]]></content>
     </entry>
     <entry>
@@ -51,7 +51,7 @@ melts?</p><p>I leave this as an exercise for the reader.</p>]]></content>
         <summary type="html"><![CDATA[The purpose of a Useless Machine is to turn itself off when activated. Kits and built examples are available for purchase. While researching I found LEGO models but without kits or instructions.]]></summary>
         <content type="html"><![CDATA[<p>The purpose of a Useless Machine is to turn itself off when activated. Kits and built examples are available for purchase. While researching I found LEGO models but without kits or instructions.</p><p>Challenge accepted!</p><p>I completed the model in March of 2017 and revised it today.</p><p>Without a parts list or instructions I decided to reverse engineer the device from the following video:
 <a href="https://www.youtube.com/watch?v=HAk-rhvZe2w" target="_blank" rel="noopener noreferrer">[011] Lego Technic - Useless Machine</a></p><p>I created a model using LEGO Digital Designer (LDD) before buying the parts. <a target="_blank" href="/assets/files/UselessMachine-e1768908fee10efdef797bf5be1959e3.lxf">Download the LXF model</a></p><p>Using LDD I generated a PDF with building instructions and a parts list at the end.
-<a target="_blank" href="/assets/files/UselessMachineInstructions-b1bc116ae50f7c92d9c62f702b10a07a.pdf">Download the PDF instructions</a></p><blockquote><p>NOTE: The model and instructions do not include the LEGO Pull Back MOTOR 6x5x3! It was not available in the LDD.</p></blockquote><p>Here is the model at the final step of assembly</p><p><img loading="lazy" alt="Final Step from instructions" src="/assets/images/Step84-5965046073be8f2a6074863640260681.png" width="800" height="600" class="img_ev3q"></p>]]></content>
+<a target="_blank" href="/assets/files/UselessMachineInstructions-b1bc116ae50f7c92d9c62f702b10a07a.pdf">Download the PDF instructions</a></p><blockquote><p>NOTE: The model and instructions do not include the LEGO Wind Up MOTOR 6x5x3! It was not available in the LDD.</p></blockquote><p>Here is the model at the final step of assembly</p><p><img loading="lazy" alt="Final Step from instructions" src="/assets/images/Step84-5965046073be8f2a6074863640260681.png" width="800" height="600" class="img_ev3q"></p>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Custom Apex Domain for GitHub Pages]]></title>
