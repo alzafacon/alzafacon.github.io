@@ -16,7 +16,7 @@ I created a model using LEGO Digital Designer (LDD) before buying the parts. [Do
 Using LDD I generated a PDF with building instructions and a parts list at the end.
 [Download the PDF instructions](./UselessMachineInstructions.pdf)
 
-> NOTE: The model and instructions do not include the LEGO Pull Back MOTOR 6x5x3! It was not available in the LDD.
+> NOTE: The model and instructions do not include the LEGO Wind Up MOTOR 6x5x3! It was not available in the LDD.
 
 Here is the model at the final step of assembly
 
