@@ -59,6 +59,7 @@
 
 
 > Make illegal states unrepresentable.
+>
 > **Yaron Minsky**
 
 <br/>
