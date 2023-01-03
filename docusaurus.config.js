@@ -23,12 +23,8 @@ const config = {
     [
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/alzafacon/alzafacon.github.io/edit/main/website/',
-        },
+      {
+        docs: false,
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
@@ -38,7 +34,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+      },
     ],
   ],
 
