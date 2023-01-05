@@ -14,7 +14,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <Grid container justifyContent="center">
-        <Grid item xs={12} sm={12} md={12}>
+        <Grid item xs={10} sm={12} md={12}>
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <div>
               Hi. This is where I keep some of my ideas. For example....
