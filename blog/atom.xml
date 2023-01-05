@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fidelcoria.com/blog</id>
-    <title>Technical Journal Blog</title>
+    <title>Tech Notes Blog</title>
     <updated>2022-11-01T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fidelcoria.com/blog"/>
-    <subtitle>Technical Journal Blog</subtitle>
+    <subtitle>Tech Notes Blog</subtitle>
     <icon>https://fidelcoria.com/https://emojicdn.elk.sh/🚮</icon>
     <entry>
         <title type="html"><![CDATA[Does melting ice really cause sea levels to rise?]]></title>
