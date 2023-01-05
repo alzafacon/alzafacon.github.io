@@ -17,7 +17,7 @@
 <br/>
 
 > Es triste la soledad, pero es más bonita la libertad.
->> Spanish, Loneliness is painful, but independence is more delightful.
+>> Spanish, Loneliness is painful, but liberty is more delightful.
 >
 > **Venancio Muñoz**
 
