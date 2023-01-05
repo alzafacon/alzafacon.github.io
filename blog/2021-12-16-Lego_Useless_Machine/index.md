@@ -1,3 +1,7 @@
+---
+authors: alzafacon
+---
+
 # Useless Machine with LEGO Technic
 
 The purpose of a Useless Machine is to turn itself off when activated. Kits and built examples are available for purchase. While researching I found LEGO models but without kits or instructions.

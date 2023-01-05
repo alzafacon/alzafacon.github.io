@@ -1,3 +1,7 @@
+---
+authors: alzafacon
+---
+
 # Custom Apex Domain for GitHub Pages
 
 I'll explain how I setup the DNS records for an apex domain (fidelcoria.com) with a redirect from www.fidelcoria.com to fidelcoria.com.
