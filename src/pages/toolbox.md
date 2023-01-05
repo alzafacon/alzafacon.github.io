@@ -2,14 +2,13 @@
 Useful little things are easy to lose
 
 ---
-## GitLab Split long commands... there's a bug
+## GitLab CI: Split long commands... there's a bug
 
 At time of writing (29 Nov 2022) GitLab CI has an embarrassing bug. Certain script failures are not reported. Failures in script files are also not reported unless it's the last command in the script.
 
-```
-If multiple commands are combined into one command string, only the last command’s failure or success is reported. Failures from earlier commands are ignored due to a bug. To work around this, run each command as a separate script item, or add an exit 1 command to each command string.
-```
-> source: https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
+> If multiple commands are combined into one command string, only the last command’s failure or success is reported. Failures from earlier commands are ignored due to a bug. To work around this, run each command as a separate script item, or add an exit 1 command to each command string.
+>
+>> source: https://docs.gitlab.com/ee/ci/yaml/script.html#split-long-commands
 
 ---
 ## JavaScript thread sleep
