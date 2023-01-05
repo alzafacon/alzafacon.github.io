@@ -56,6 +56,13 @@ const config = {
         style: 'dark',
         links: [
           {
+            items: [
+              {to: '/blog', label: 'Blog'},
+              {to: '/phrases', label: 'Phrases'},
+              {to: '/toolbox', label: 'Toolbox'},
+            ]
+          },
+          {
             title: 'More',
             items: [
               {
