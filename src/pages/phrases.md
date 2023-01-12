@@ -57,10 +57,15 @@
 <br/>
 <br/>
 
-
 > Make illegal states unrepresentable.
 >
 > **Yaron Minsky**
+
+<br/>
+<br/>
+
+> Más ingenio que presupuesto, y más corazón que técnica
+>> Spanish, More wit than budget, and more heart than technique
 
 <br/>
 <br/>
