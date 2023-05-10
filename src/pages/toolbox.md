@@ -2,6 +2,17 @@
 Useful little things are easy to lose
 
 ---
+## Docker: "bash" into a docker container
+I often need to inspect docker images.  The following is the command to do this and a break down of the options.
+
+```
+docker run -it --rm IMAGE_NAME /bin/bash
+```
+-i, --interactive Keep STDIN open even if not attached 
+-t, --tty Allocate a pseudo-TTY
+--rm Automatically remove the container when it exits 
+
+---
 ## GitLab CI: Split long commands... there's a bug
 
 At time of writing (29 Nov 2022) GitLab CI has an embarrassing bug. Certain script failures are not reported. Failures in script files are also not reported unless it's the last command in the script.
