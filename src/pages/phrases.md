@@ -3,6 +3,12 @@
 <br/>
 <br/>
 
+> El que temprano se moja, temprano se seca
+>> Spanish, The one that get's rained on first, dries off first
+
+<br/>
+<br/>
+
 > Kontext ist könig.
 >> German, Context is king.
 >
