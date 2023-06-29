@@ -1,3 +1,6 @@
+[![documentation deployment](https://github.com/alzafacon/alzafacon.github.io/actions/workflows/documentation.yml/badge.svg)](https://github.com/alzafacon/alzafacon.github.io/actions/workflows/documentation.yml)
+
+
 # Website
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
