@@ -2,6 +2,13 @@
 Useful little things are easy to lose
 
 ---
+## GitLab: Clone all repos from a group
+Install the `glab` cli tool first.
+
+```
+GITLAB_HOST=gitlab.example.com glab repo clone --group MyGroup --archived=false --preserve-namespace --paginate
+```
+---
 ## Docker: "bash" into a docker container
 I often need to inspect docker images.  The following is the command to do this and a break down of the options.
 
