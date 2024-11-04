@@ -4,9 +4,9 @@ authors: alzafacon
 
 #  Plumbing: Connect 2 pipes with 4 elbows
 
-The underground PVC water pipes outside my home are frequently cracking or leaking at the joints. After making several repairs I turned to reddit for an easier way.
+The underground PVC water pipes outside my home are frequently cracking or leaking at the joints. After making several repairs I turned to reddit for advice on making repairs.
 
-A professional recommended using 4 elbows! Genius! The joint is assembled by sliding the top part into the bottom 2 elbows. Instead of having to dig out the pipes enough to bend the pipes to fit couplers on each end.
+Someone recommended using 4 elbows! The joint is assembled by sliding the top part into the bottom 2 elbows. Instead of having to dig out the pipes enough to bend the pipes to fit couplers on each end.
 
 ```
        _____    _____
@@ -21,11 +21,13 @@ ____|____|        |____|_____
 fig. 1
 ```
 
+I heard from a professional plumber that the extra elbows can cause a drop in pressure, but more importantly there are more joints that could fail. So the extra digging is worth the trouble.
+
 But can this technique be applied even if the pipes are skewed?
 
 <!--truncate-->
 
-Of course I want to generalize. I'm just the typical math aficionado. I will attempt a proof by construction.
+So let's generalize. Here is a proof by construction.
 
 The critical feature of the 4 elbow joint is that 2 vertical pipes shown below must be parallel (so they can be slid into place).
 
@@ -40,7 +42,7 @@ fig. 2
 ```
 
 
-Here is a simplified drawing with conventional mathematical notation. Pretend it is in three dimensions.
+Here is a simplified drawing with conventional notation. Pretend it is in three dimensions.
 
 ```
         C         D
@@ -106,7 +108,7 @@ fig. 4
 fig. 5
 ```
 
-Yes! The 4 elbow technique can always work... in you have enough space.
+Yes! The 4 elbow technique always works... in theory.
 
 
 <!-- Another advantage is that the joints will be straight and without any flexing to weaken the joints.
